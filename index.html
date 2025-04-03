@@ -22,8 +22,8 @@
     }
 
     header img {
-      width: 100px;
-      height: 100px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       border: 2px solid white;
       object-fit: cover;
@@ -76,12 +76,37 @@
       margin-bottom: 0.5rem;
     }
 
+    .quote {
+      font-style: italic;
+      color: #2F4156;
+      border-left: 4px solid #567C8D;
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+
+    .tech-stack {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .aspirations {
+      background-color: #2F4156;
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
     footer {
       text-align: center;
       background-color: #2F4156;
       color: white;
       padding: 1rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     @media (max-width: 600px) {
@@ -114,18 +139,42 @@
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <section>
+  <section id="about">
     <h2>About Me</h2>
-    <p>Hi, I'm Ananya — a data and cloud enthusiast passionate about transforming ideas into scalable solutions. I love building impactful dashboards, automating workflows, and experimenting with cloud technologies. XXXX</p>
+    <p class="quote">"I aspire to be a data & AI leader, contributing across business lifecycles and shaping strategies that drive intelligent solutions."</p>
+    <p>👩🏽‍💻 <strong>Data Engineer Intern</strong> at Nuvento Inc<br>
+       🎯 <strong>MS in Business Analytics</strong> at University of Texas at Dallas<br>
+       🎓 <strong>BE - Civil Engineering</strong> from Visvesvaraya Technological University</p>
+
+    <div class="tech-stack">
+      <h3>Tech Stack</h3>
+      <ul>
+        <li>Python, SQL, R, C++, SAS</li>
+        <li>Power BI, Tableau, Alteryx, Excel</li>
+        <li>Azure, AWS (S3, Redshift), Snowflake</li>
+        <li>ETL, Databricks, Hadoop, Git</li>
+        <li>PowerApps, Informatica, Cognos</li>
+        <li>ML, NLP, Web Scraping</li>
+      </ul>
+    </div>
   </section>
 
-  <section>
+  <section class="aspirations">
+    <h2>Aspirations</h2>
+    <p>
+      I am passionate about building data and AI-powered solutions that solve real-world problems.  
+      My goal is to lead with impact — blending cloud, automation, and analytics to drive smarter decisions  
+      and make technology meaningful across industries.
+    </p>
+  </section>
+
+  <section id="projects">
     <h2>Project Highlights</h2>
     <ul>
       <li><strong>Real Estate Chatbot & ETL Pipeline:</strong> Extracted 47GB MLS data, improved integration by 12%, powered LLM chatbot.</li>
@@ -133,7 +182,7 @@
     </ul>
   </section>
 
-  <section>
+  <section id="experience">
     <h2>Professional Experience</h2>
     <p><strong>Data Engineer Intern – Nuvento Inc (Feb 2025 – Present)</strong><br>
     • Refactored data models improving scalability and reduced query time by 40%.<br>
@@ -152,7 +201,7 @@
     • Improved engagement by 20% through KPI analysis and Excel-based reports.</p>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:ananya.achar82@gmail.com">ananya.achar82@gmail.com</a></p>
     <p>Phone: (945) 527-4967</p>
