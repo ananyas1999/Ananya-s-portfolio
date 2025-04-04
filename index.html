@@ -7,6 +7,10 @@
   <title>Ananya Srinath Achar | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,12 +26,18 @@
     }
 
     header img {
-      width: 180px;
-      height: 180px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
-      border: 2px solid white;
+      border: 5px solid white;
       object-fit: cover;
       margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .cta-buttons a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     .cta-buttons a {
@@ -38,6 +48,7 @@
       text-decoration: none;
       border-radius: 5px;
       display: inline-block;
+      transition: all 0.3s ease-in-out;
     }
 
     nav {
@@ -47,14 +58,26 @@
     }
 
     nav a {
+      position: relative;
       margin: 0 1.5rem;
       color: #2F4156;
       text-decoration: none;
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #2F4156;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     section {
@@ -107,6 +130,9 @@
       color: white;
       padding: 1rem;
       margin-top: 3rem;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     }
 
     @media (max-width: 600px) {
@@ -132,7 +158,7 @@
     <h1>Ananya Srinath Achar</h1>
     <p>Data Analyst | BI Engineer | Cloud Enthusiast</p>
     <div class="cta-buttons">
-      <a href="resume.pdf" download>Download Resume</a>
+      <a href="resume.pdf" download="Ananya_Srinath_Achar_Resume.pdf">📄 Download Resume (PDF)</a>
       <a href="https://www.linkedin.com/in/ananyaachar/" target="_blank">LinkedIn</a>
       <a href="https://github.com/ananya" target="_blank">GitHub</a>
     </div>
@@ -145,14 +171,13 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
     <h2>About Me</h2>
     <p class="quote">"I aspire to be a data & AI leader, contributing across business lifecycles and shaping strategies that drive intelligent solutions."</p>
     <p>👩🏽‍💻 <strong>Data Engineer Intern</strong> at Nuvento Inc<br>
        🎯 <strong>MS in Business Analytics</strong> at University of Texas at Dallas<br>
        🎓 <strong>BE - Electronics and Communication Engineering</strong> from Visvesvaraya Technological University</p>
 
-    
     <div class="tech-stack">
       <h3>Data Analysis Toolkit</h3>
       <ul>
@@ -183,7 +208,7 @@
     </p>
   </section>
 
-  <section id="projects">
+  <section id="projects" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
     <h2>Project Highlights</h2>
     <ul>
       <li><strong>Real Estate Chatbot & ETL Pipeline:</strong> Extracted 47GB MLS data, improved integration by 12%, powered LLM chatbot.</li>
@@ -191,7 +216,7 @@
     </ul>
   </section>
 
-  <section id="experience">
+  <section id="experience" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
     <h2>Professional Experience</h2>
     <p><strong>Data Engineer Intern – Nuvento Inc (Feb 2025 – Present)</strong><br>
     • Refactored data models improving scalability and reduced query time by 40%.<br>
@@ -210,7 +235,7 @@
     • Improved engagement by 20% through KPI analysis and Excel-based reports.</p>
   </section>
 
-  <section id="contact">
+  <section id="contact" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:ananya.achar82@gmail.com">ananya.achar82@gmail.com</a></p>
     <p>Phone: (945) 527-4967</p>
