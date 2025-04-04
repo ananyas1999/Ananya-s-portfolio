@@ -2,247 +2,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ananya Srinath Achar | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananya Srinath Achar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #F5EEEB;
-      color: #2F4156;
-    }
+        .hero-section {
+            background-image: url('image.png');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            position: relative;
+        }
 
-    header {
-      background-color: #2F4156;
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem 2rem 1rem;
-    }
+        .profile-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 12px;
+        }
 
-    header img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      border: 5px solid white;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
 
-    .cta-buttons a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+        h1 {
+            margin: 10px 0 5px;
+        }
 
-    .cta-buttons a {
-      background-color: #567C8D;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      margin: 0.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      transition: all 0.3s ease-in-out;
-    }
+        p {
+            margin: 5px 0 15px;
+        }
 
-    nav {
-      background-color: #C0D9E6;
-      text-align: center;
-      padding: 1rem 0;
-    }
+        .buttons {
+            margin-top: 10px;
+        }
 
-    nav a {
-      position: relative;
-      margin: 0 1.5rem;
-      color: #2F4156;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background-color: #2F4156;
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s ease-in-out;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-
-    h2 {
-      color: #567C8D;
-      margin-top: 2rem;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    .quote {
-      font-style: italic;
-      color: #2F4156;
-      border-left: 4px solid #567C8D;
-      padding-left: 1rem;
-      margin: 1rem 0;
-    }
-
-    .tech-stack {
-      background-color: #fff;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 2rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-
-    .aspirations {
-      background-color: #2F4156;
-      color: white;
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #2F4156;
-      color: white;
-      padding: 1rem;
-      margin-top: 3rem;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-
-      .cta-buttons a {
-        display: block;
-        margin: 0.5rem auto;
-      }
-
-      header {
-        padding: 2rem 1rem;
-      }
-    }
-  </style>
+        .btn {
+            background-color: #5e93a6;
+            color: white;
+            padding: 10px 16px;
+            margin: 5px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="profile.jpeg" alt="Ananya Srinath Achar" />
-    <h1>Ananya Srinath Achar</h1>
-    <p>Data Analyst | BI Engineer | Cloud Enthusiast</p>
-    <div class="cta-buttons">
-      <a href="resume.pdf" download="Ananya_Srinath_Achar_Resume.pdf">📄 Download Resume (PDF)</a>
-      <a href="https://www.linkedin.com/in/ananyaachar/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/ananyas1999" target="_blank">GitHub</a>
-    </div>
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
-    <h2>About Me</h2>
-    <p class="quote">"I aspire to be a data & AI leader, contributing across business lifecycles and shaping strategies that drive intelligent solutions."</p>
-    <p>👩🏽‍💻 <strong>Data Engineer Intern</strong> at Nuvento Inc<br>
-       🎯 <strong>MS in Business Analytics</strong> at University of Texas at Dallas<br>
-       🎓 <strong>BE - Electronics and Communication Engineering</strong> from Visvesvaraya Technological University</p>
-
-    <div class="tech-stack">
-      <h3>Data Analysis Toolkit</h3>
-      <ul>
-        <li>🧠 Python (Pandas, NumPy), R, SQL, SAS</li>
-        <li>📊 Power BI, Tableau, Alteryx, Excel</li>
-        <li>📈 A/B Testing, Statistics, Data Cleaning</li>
-        <li>🗂️ Data Visualization & Insight Storytelling</li>
-        <li>🔍 Web Scraping, ML (Scikit-learn), NLP</li>
-      </ul>
-    </div>
-    <div class="tech-stack">
-      <h3>Data Engineering Stack</h3>
-      <ul>
-        <li>☁️ Azure, AWS (S3, Redshift), Snowflake</li>
-        <li>⚙️ ETL, Databricks, Hadoop, Git</li>
-        <li>🛠️ PowerApps, Informatica, Cognos</li>
-        <li>📂 Data Warehousing & Pipeline Automation</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="aspirations">
-    <h2>Aspirations</h2>
-    <p>
-      I am passionate about building data and AI-powered solutions that solve real-world problems.  
-      My goal is to lead with impact — blending cloud, automation, and analytics to drive smarter decisions  
-      and make technology meaningful across industries.
-    </p>
-  </section>
-
-  <section id="projects" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
-    <h2>Project Highlights</h2>
-    <ul>
-      <li><strong>Real Estate Chatbot & ETL Pipeline:</strong> Extracted 47GB MLS data, improved integration by 12%, powered LLM chatbot.</li>
-      <li><strong>Employee Severance Model:</strong> Enhanced PostgreSQL ETL pipeline by 20%, handling 50M records.</li>
-    </ul>
-  </section>
-
-  <section id="experience" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
-    <h2>Professional Experience</h2>
-    <p><strong>Data Engineer Intern – Nuvento Inc (Feb 2025 – Present)</strong><br>
-    • Refactored data models improving scalability and reduced query time by 40%.<br>
-    • Rebuilt ETL pipelines, cutting latency by 30% to process millions of records daily.</p>
-
-    <p><strong>Data Analyst II – Cognizant (Mar 2022 – Jul 2023)</strong><br>
-    • Streamlined reporting with Power Automate and optimized workflows via Power Apps.<br>
-    • Built visualizations using Pandas, Matplotlib & Seaborn for actionable insights.<br>
-    • Improved ETL with ADF & Databricks; cut processing time by 30% and mentored interns.</p>
-
-    <p><strong>Data Analyst I – Cognizant (Jul 2021 – Mar 2022)</strong><br>
-    • Automated Power BI dashboards, reducing report time by 40%.<br>
-    • Conducted SQL optimization and resolved Power BI system issues using ServiceNow.</p>
-
-    <p><strong>Data Analyst Intern – Unique Tech Designs (Aug 2020 – Apr 2021)</strong><br>
-    • Improved engagement by 20% through KPI analysis and Excel-based reports.</p>
-  </section>
-
-  <section id="contact" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ananya.achar82@gmail.com">ananya.achar82@gmail.com</a></p>
-    <p>Phone: (945) 527-4967</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Ananya Srinath Achar. All rights reserved.</p>
-  </footer>
+    <header class="hero-section">
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Ananya Srinath Achar" class="profile-pic">
+            <h1>Ananya Srinath Achar</h1>
+            <p>Data Analyst | BI Engineer | Cloud Enthusiast</p>
+            <div class="buttons">
+                <a href="Ananya_Resume.pdf" class="btn">📄 Download Resume (PDF)</a>
+                <a href="https://www.linkedin.com/in/XXXX" class="btn">LinkedIn</a>
+                <a href="https://github.com/XXXX" class="btn">GitHub</a>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
