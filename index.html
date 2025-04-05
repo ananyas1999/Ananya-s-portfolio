@@ -2,16 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-35D09ZJ5JK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-35D09ZJ5JK');
+</script>
+  <style>
+    .fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  
+}
+
+
+  </style>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ananya Srinath Achar | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  
   <style>
     html {
       scroll-behavior: smooth;
     }
 
     body {
+      
+  font-family: 'Outfit', sans-serif;
+
+
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: aliceblue;
@@ -19,6 +49,23 @@
     }
 
     header {
+      header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background-color: rgba(0,0,0,0.3);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+header * {
+  position: relative;
+  z-index: 1;
+}
+header {
+  position: relative;
+}
+
       background-image: url('image.png');
       background-size: cover;
       background-position: center;
@@ -37,52 +84,63 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
-    .cta-buttons a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+    .cta-buttons a:hover,
+nav a:hover {
+  background-color: #3B4F68;
+  transform: translateY(-2px);
+}
 
     .cta-buttons a {
-      background-color: #567C8D;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      margin: 0.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      transition: all 0.3s ease-in-out;
-    }
+  background-color: #2F4156;
+  color: #C3DCEB;
+  padding: 0.9rem 1.6rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  outline: 2px solid #C3DCEB;
+  outline-offset: -5px;
+}
+
 
     nav {
-      background-color: #C0D9E6;
-      text-align: center;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0px;
-    }
+  background-color: #C3DCEB;  /* light blue from your screenshot */
+  text-align: center;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    nav a {
-      position: relative;
-      margin: 0 1.5rem;
-      color: #2F4156;
-      text-decoration: none;
-      font-weight: bold;
-    }
 
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background-color: #2F4156;
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s ease-in-out;
-    }
+nav a {
+  background-color: #2F4156;        /* dark blue */
+  color: #C3DCEB;                   /* light blue text */
+  padding: 10px 20px;
+  margin: 0 0.5rem;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;                     /* remove default border */
+  outline: 3px solid #C3DCEB;       /* single light blue outline */
+  outline-offset: -6px;             /* brings it slightly inside */
+  display: inline-block;
+}
 
-    nav a:hover::after {
-      width: 100%;
-    }
+
+
+
+
+
+nav a:hover {
+  background-color: #3B4F68;
+}
+
 
     section {
       max-width: 900px;
@@ -121,7 +179,7 @@
 
     .aspirations {
       background-color: #2F4156;
-      color: white;
+      color: #C0D9E6;
       padding: 2rem;
       border-radius: 10px;
       text-align: center;
@@ -135,7 +193,7 @@
     footer {
       text-align: center;
       background-color: #2F4156;
-      color: white;
+      color: #C0D9E6;
       padding: 1rem;
       margin-top: 3rem;
       box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
@@ -156,8 +214,66 @@
         padding: 2rem 1rem;
       }
     }
+    nav a.active {
+  color: #ffffff;
+  background-color: #567C8D;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+.cta-buttons a {
+  background-color: #C3DCEB;
+  color: #2F4156;
+  padding: 0.9rem 1.6rem; /* more padding to give space inside */
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  outline: 2px solid #2F4156;      /* dark blue border */
+  outline-offset: -6px;            /* pulls the border inside */
+}
+
+
+
+.cta-buttons a:hover {
+  background-color: #B0D1E3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+nav a.active {
+  background-color: #C0D9E6 !important;
+  color: #2F4156 !important;
+  box-shadow: 0 0 0 2px #2F4156 inset;
+}
+
+
   </style>
 </head>
+<script>
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current)) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
 <body>
   <header>
     <img src="profile.jpeg" alt="Ananya Srinath Achar" />
@@ -177,11 +293,11 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about" style="background-color: #ffffff;border-radius: 12px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04); margin-top: 20px; border: 1px solid #C0D9E6;">
+  <section id="about" style="background-color: #ffffff;border-radius: 12px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04); margin-top: 20px; border: 1px solid #C0D9E6;class=fade-in">
     <h2>About Me</h2>
     <p class="quote">"I aspire to be a data & AI leader, contributing across business lifecycles and shaping strategies that drive intelligent solutions."</p>
     <p>👩🏽‍💻 <strong>Data Engineer Intern</strong> at Nuvento Inc<br>
-       🎯 <strong>MS in Business Analytics</strong> at University of Texas at Dallas<br>
+       🎯 <strong>MS - Information Technology and Management</strong> at University of Texas at Dallas<br>
        🎓 <strong>BE - Electronics and Communication Engineering</strong> from Visvesvaraya Technological University</p>
 
     <div class="tech-stack">
@@ -214,15 +330,22 @@
     </p>
   </section>
 
-  <section id="projects" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+  <section id="projects" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);class=fade-in">
     <h2>Project Highlights</h2>
-    <ul>
-      <li><strong>Real Estate Chatbot & ETL Pipeline:</strong> Extracted 47GB MLS data, improved integration by 12%, powered LLM chatbot.</li>
-      <li><strong>Employee Severance Model:</strong> Enhanced PostgreSQL ETL pipeline by 20%, handling 50M records.</li>
-    </ul>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <div style="flex: 1 1 40%; padding: 1rem; border: 1px solid #C0D9E6; border-radius: 12px; background-color: #FAFAFA; box-shadow: 0 1px 5px rgba(0,0,0,0.05);">
+        <h4>Real Estate Chatbot & ETL</h4>
+        <p>Extracted 47GB MLS data, improved integration by 12%, powered LLM chatbot.</p>
+      </div>
+      <div style="flex: 1 1 40%; padding: 1rem; border: 1px solid #C0D9E6; border-radius: 12px; background-color: #FAFAFA; box-shadow: 0 1px 5px rgba(0,0,0,0.05);">
+        <h4>Employee Severance Model</h4>
+        <p>Enhanced PostgreSQL ETL pipeline by 20%, handling 50M records efficiently.</p>
+      </div>
+    </div>
+    
   </section>
 
-  <section id="experience" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+  <section id="experience" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);class=fade-in">
     <h2>Professional Experience</h2>
     <p><strong>Data Engineer Intern – Nuvento Inc (Feb 2025 – Present)</strong><br>
     • Refactored data models improving scalability and reduced query time by 40%.<br>
@@ -241,7 +364,28 @@
     • Improved engagement by 20% through KPI analysis and Excel-based reports.</p>
   </section>
 
-  <section id="contact" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+  <section id="Leadership experience and other Achivements" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);class=fade-in">
+    <h2>Leadership experience and other Achivements</h2>
+    <p><strong>1. UTD Student Union Manager</strong><br>
+    • Refactored data models improving scalability and reduced query time by 40%.<br>
+    • Rebuilt ETL pipelines, cutting latency by 30% to process millions of records daily.</p>
+
+    <p><strong>Data Analyst II – Cognizant (Mar 2022 – Jul 2023)</strong><br>
+    • Streamlined reporting with Power Automate and optimized workflows via Power Apps.<br>
+    • Built visualizations using Pandas, Matplotlib & Seaborn for actionable insights.<br>
+    • Improved ETL with ADF & Databricks; cut processing time by 30% and mentored interns.</p>
+
+    <p><strong>Data Analyst I – Cognizant (Jul 2021 – Mar 2022)</strong><br>
+    • Automated Power BI dashboards, reducing report time by 40%.<br>
+    • Conducted SQL optimization and resolved Power BI system issues using ServiceNow.</p>
+
+    <p><strong>Data Analyst Intern – Unique Tech Designs (Aug 2020 – Apr 2021)</strong><br>
+    • Improved engagement by 20% through KPI analysis and Excel-based reports.</p>
+  </section>
+
+
+
+  <section id="contact" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04)class=fade-in;">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:ananya.achar82@gmail.com">ananya.achar82@gmail.com</a></p>
     <p>Phone: (945) 527-4967</p>
@@ -250,5 +394,48 @@
   <footer>
     <p>&copy; 2025 Ananya Srinath Achar. All rights reserved.</p>
   </footer>
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+<a href="#top" id="backToTop" style="display:none;position:fixed;bottom:30px;right:20px;background-color:#567C8D;color:white;padding:10px 15px;border-radius:50%;text-decoration:none;font-weight:bold;font-size:18px;">↑</a>
+
+<script>
+  const backToTop = document.getElementById('backToTop');
+  window.onscroll = () => {
+    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+  };
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+
+    let currentSection = '';
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (scrollY >= sectionTop) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(currentSection)) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+  
 </body>
 </html>
