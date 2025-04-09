@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience | Ananya Srinath Achar</title>
+  <link rel="icon" type="image/png" href="cutelogo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      background-color: aliceblue;
+      color: #2F4156;
+    }
+    nav {
+      background-color: #C3DCEB;
+      text-align: center;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      background-color: #2F4156;
+      color: #C3DCEB;
+      padding: 10px 20px;
+      margin: 0 0.5rem;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      outline: 3px solid #C3DCEB;
+      outline-offset: -6px;
+      display: inline-block;
+    }
+    nav a:hover {
+      background-color: #3B4F68;
+    }
+    h2 {
+      color: #567C8D;
+      text-align: center;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      position: relative;
+      margin: 2rem auto;
+      max-width: 900px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: #C0D9E6;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .card {
+      position: relative;
+      width: 100%;
+      display: flex;
+    }
+    .card-left {
+      justify-content: flex-start;
+    }
+    .card-right {
+      justify-content: flex-end;
+    }
+    .card-content {
+      background-color: #FAFAFA;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      width: 48%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      z-index: 1;
+      border-left: 6px solid #2F4156;
+    }
+    .card-right .card-content {
+      border-left: none;
+      border-right: 6px solid #2F4156;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h2>Professional Experience</h2>
+
+  <div class="timeline">
+    <div class="card card-left">
+      <div class="card-content">
+        <h3>Nuvento Inc</h3>
+        <p><strong>Software Engineer Intern</strong> (Feb 2025 – Present)</p>
+        <p>Improved dashboard clarity and spotted gaps in performance across systems. Collaborated with teams to enhance data refresh speed and smooth dashboard flow.</p>
+      </div>
+    </div>
+
+    <div class="card card-right">
+      <div class="card-content">
+        <h3>Cognizant</h3>
+        <p><strong>Data Analyst II</strong> (Mar 2022 – Jul 2023)</p>
+        <p>Built reporting flows that empowered faster, smarter decision-making. Supported cross-functional teams and mentored peers on business analytics goals.</p>
+      </div>
+    </div>
+
+    <div class="card card-left">
+      <div class="card-content">
+        <h3>Cognizant</h3>
+        <p><strong>Data Analyst I</strong> (Jul 2021 – Mar 2022)</p>
+        <p>Replaced outdated reports with clear visuals for better decision-making. Resolved ongoing data access issues and made dashboards work faster.</p>
+      </div>
+    </div>
+
+    <div class="card card-right">
+      <div class="card-content">
+        <h3>Unique Tech Designs</h3>
+        <p><strong>Data Analyst Intern</strong> (Aug 2020 – Apr 2021)</p>
+        <p>Shared insights on campaign performance through easy-to-read reports. Helped structure raw data that supported early internal reporting efforts.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Ananya Srinath Achar. All rights reserved.</p>
+  </footer>
+</body>
+</html>
