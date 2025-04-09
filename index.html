@@ -268,7 +268,7 @@ nav a.active {
 }
 .rec-carousel {
   position: relative;
-  max-width: 800px;
+  max-width: 550px;
   margin: auto;
   overflow: hidden;
 }
@@ -278,41 +278,43 @@ nav a.active {
   transition: transform 0.6s ease;
 }
 
-.rec-card {
+.rec-card.small {
   min-width: 100%;
-  background: white;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.8rem 1.2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   text-align: center;
-  position: relative;
+  box-sizing: border-box;
 }
 
 .rec-dp {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .rec-card blockquote {
   font-style: italic;
   color: #2F4156;
-  margin: 0.8rem auto;
-  font-size: 1.05rem;
-  max-width: 90%;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  margin: 0.4rem 0;
 }
 
 .rec-card h4 {
-  margin-top: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
   color: #2F4156;
+  font-size: 1rem;
 }
 
 .rec-title {
   color: #567C8D;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .rec-btn {
@@ -323,12 +325,12 @@ nav a.active {
   color: white;
   border: none;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
   cursor: pointer;
   z-index: 2;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .rec-btn.prev {
@@ -579,7 +581,7 @@ nav a.active {
         <div style="background-color: #FAFAFA; border-left: 6px solid #2F4156; padding: 1rem 1.5rem; border-radius: 10px; width: 48%; box-shadow: 0 2px 6px rgba(0,0,0,0.06); z-index: 1;">
           <h3 style="margin: 0;">Nuvento Inc</h3>
           <p style="margin: 0.2rem 0; font-weight: bold;">Software Engineer Intern (Feb 2025 – Present)</p>
-          <p style="margin-top: 0.6rem;">Improved dashboard clarity and spotted gaps in performance across systems. Collaborated with teams to enhance data refresh speed and smooth dashboard flow.</p>
+          <p style="margin-top: 0.6rem;">Contributed to enhancing a school performance management platform by improving data reliability, streamlining workflows, and aligning reporting frameworks with educational goals. Enabled data-driven decision-making by delivering clean, actionable datasets and resolving pipeline inefficiencies, supporting continuous academic strategy improvements.</p>
         </div>
       </div>
   
@@ -587,7 +589,9 @@ nav a.active {
         <div style="background-color: #FAFAFA; border-right: 6px solid #2F4156; padding: 1rem 1.5rem; border-radius: 10px; width: 48%; box-shadow: 0 2px 6px rgba(0,0,0,0.06); z-index: 1;">
           <h3 style="margin: 0;">Cognizant</h3>
           <p style="margin: 0.2rem 0; font-weight: bold;">Data Analyst II (Mar 2022 – Jul 2023)</p>
-          <p style="margin-top: 0.6rem;">Built reporting flows that empowered faster, smarter decision-making. Supported cross-functional teams and mentored peers on business analytics goals.</p>
+          <p style="margin-top: 0.6rem;">Enabled accurate, automated reporting and improved operational efficiency across finance and operations by streamlining dashboards, enhancing data validation, and reducing manual tasks through automation. Contributed to faster decision-making and supported a culture of continuous improvement through mentoring and proactive issue resolution.
+
+          </p>
         </div>
       </div>
   
@@ -595,7 +599,7 @@ nav a.active {
         <div style="background-color: #FAFAFA; border-left: 6px solid #2F4156; padding: 1rem 1.5rem; border-radius: 10px; width: 48%; box-shadow: 0 2px 6px rgba(0,0,0,0.06); z-index: 1;">
           <h3 style="margin: 0;">Cognizant</h3>
           <p style="margin: 0.2rem 0; font-weight: bold;">Data Analyst I (Jul 2021 – Mar 2022)</p>
-          <p style="margin-top: 0.6rem;">Replaced outdated reports with clear visuals for better decision-making. Resolved ongoing data access issues and made dashboards work faster.</p>
+          <p style="margin-top: 0.6rem;">Optimized system performance by eliminating technical bottlenecks, significantly improving data retrieval speeds and operational reporting reliability. Transitioned legacy reporting systems into modern, automated dashboards to support scalable business analytics.</p>
         </div>
       </div>
   
@@ -603,7 +607,7 @@ nav a.active {
         <div style="background-color: #FAFAFA; border-right: 6px solid #2F4156; padding: 1rem 1.5rem; border-radius: 10px; width: 48%; box-shadow: 0 2px 6px rgba(0,0,0,0.06); z-index: 1;">
           <h3 style="margin: 0;">Unique Tech Designs</h3>
           <p style="margin: 0.2rem 0; font-weight: bold;">Data Analyst Intern (Aug 2020 – Apr 2021)</p>
-          <p style="margin-top: 0.6rem;">Shared insights on campaign performance through easy-to-read reports. Helped structure raw data that supported early internal reporting efforts.</p>
+          <p style="margin-top: 0.6rem;">Enhanced early-stage reporting by building scalable Excel solutions and analyzing user behavior trends, directly contributing to improved engagement and usability. Strengthened data accessibility and reporting efficiency through close collaboration with internal teams.</p>
         </div>
       </div>
   
@@ -679,8 +683,9 @@ nav a.active {
   
     <div class="rec-carousel">
       <div class="rec-track">
-        <!-- Card 1 -->
-        <div class="rec-card">
+  
+        <!-- 1 -->
+        <div class="rec-card small">
           <img src="dp-brenda.jpg" alt="Brenda Siri" class="rec-dp">
           <blockquote>“Ananya takes an active interest in learning and gaining knowledge in American Business Practices.”</blockquote>
           <blockquote>“Her experience with Python, Microsoft Power BI, C++, My SQL, C, HTML, CSS, JavaScript, and Informatica would make her an asset to any organization.”</blockquote>
@@ -688,8 +693,8 @@ nav a.active {
           <p class="rec-title">President & CEO, Corporate Connections</p>
         </div>
   
-        <!-- Card 2 -->
-        <div class="rec-card">
+        <!-- 2 -->
+        <div class="rec-card small">
           <img src="dp-partha.jpg" alt="Parthasaradhi Naidu" class="rec-dp">
           <blockquote>“I was particularly impressed with her communication skills and ability to deal with challenging situations.”</blockquote>
           <blockquote>“She will be an excellent asset to the team.”</blockquote>
@@ -697,7 +702,51 @@ nav a.active {
           <p class="rec-title">Sr. Associate, Cognizant</p>
         </div>
   
-        <!-- Add other cards similarly (use dp-shreya.jpg, dp-mukul.jpg etc) -->
+        <!-- 3 -->
+        <div class="rec-card small">
+          <img src="dp-shreya.jpg" alt="Shreya Srinivas" class="rec-dp">
+          <blockquote>“Her clear vision and strategic thinking have been an asset to all the projects she has been a part of.”</blockquote>
+          <blockquote>“I highly recommend Ananya as a leader and believe her contributions would be invaluable to any organization.”</blockquote>
+          <h4>Shreya Srinivas</h4>
+          <p class="rec-title">Senior Analyst, Capgemini</p>
+        </div>
+  
+        <!-- 4 -->
+        <div class="rec-card small">
+          <img src="dp-mukul.jpg" alt="Mukul Mysore" class="rec-dp">
+          <blockquote>“Full of ideas and her clarity towards problem solving is exemplary.”</blockquote>
+          <blockquote>“One won't find many like Ananya out there.”</blockquote>
+          <h4>Mukul Mysore</h4>
+          <p class="rec-title">Incoming Intern, Amazon</p>
+        </div>
+  
+        <!-- 5 -->
+        <div class="rec-card small">
+          <img src="dp-venkat.jpg" alt="Venkat Nikhil" class="rec-dp">
+          <blockquote>“She is highly adaptable, supportive and encouraging and would be a great asset to any team.”</blockquote>
+          <blockquote>“It was really great to be working under her leadership.”</blockquote>
+          <h4>Venkat Nikhil</h4>
+          <p class="rec-title">Software Engineer</p>
+        </div>
+  
+        <!-- 6 -->
+        <div class="rec-card small">
+          <img src="dp-prabhu.jpg" alt="Prabhu Sundararaj" class="rec-dp">
+          <blockquote>“She set up sync up calls and gathered status for all the pending tasks from fellow teammates.”</blockquote>
+          <blockquote>“She will become a good team lead and trainer for her fellow trainees.”</blockquote>
+          <h4>Prabhu Sundararaj</h4>
+          <p class="rec-title">Azure Data Engineer</p>
+        </div>
+  
+        <!-- 7 -->
+        <div class="rec-card small">
+          <img src="dp-ambreesh.jpg" alt="Ambreesh Naidu" class="rec-dp">
+          <blockquote>“She has shared tons of quality info that a life coach would generally have.”</blockquote>
+          <blockquote>“The way she is handling the project is comparable to experts.”</blockquote>
+          <h4>Ambreesh Naidu</h4>
+          <p class="rec-title">Power BI Developer</p>
+        </div>
+  
       </div>
   
       <button class="rec-btn prev">&#10094;</button>
@@ -706,15 +755,6 @@ nav a.active {
     </div>
   </section>
   
-  
-      <!-- Arrows -->
-      <button class="carousel-btn prev">&#10094;</button>
-      <button class="carousel-btn next">&#10095;</button>
-  
-      <!-- Dots -->
-      <div class="carousel-dots"></div>
-    </div>
-  </section>
   
 
 
