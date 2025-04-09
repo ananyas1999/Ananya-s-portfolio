@@ -120,6 +120,41 @@ nav a:hover {
   outline: 2px solid #C3DCEB;
   outline-offset: -5px;
 }
+.cert-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F4F9FB;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border-left: 6px solid #2F4156;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  color: #2F4156;
+}
+
+.cert-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
+.cert-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cert-org {
+  font-size: 0.9rem;
+  color: #567C8D;
+  margin: 0.2rem 0 0;
+}
+
+.cert-link {
+  font-weight: bold;
+  color: #2F4156;
+  font-size: 1rem;
+}
 
 
     nav {
@@ -484,8 +519,12 @@ nav a.active {
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#recommendations">Recommendations</a>
     <a href="#contact">Contact</a>
   </nav>
+  
 
   <section id="about" class="fade-in" style="
   background-color: #ffffff;
@@ -610,6 +649,49 @@ nav a.active {
           <p style="margin-top: 0.6rem;">Enhanced early-stage reporting by building scalable Excel solutions and analyzing user behavior trends, directly contributing to improved engagement and usability. Strengthened data accessibility and reporting efficiency through close collaboration with internal teams.</p>
         </div>
       </div>
+  
+    </div>
+  </section>
+  
+  <section id="certifications" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); padding: 2rem; max-width: 900px; margin: 2rem auto;">
+    <h2 style="color: #567C8D; text-align: center;">📜 Certifications</h2>
+  
+    <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem;">
+      
+      <!-- Certificate 1 -->
+      <a href="https://www.credential.net/3d067df9-cc76-4cad-ba28-7f7f20f34f17" target="_blank" style="text-decoration: none;">
+        <div class="cert-card">
+          <div>
+            <h3 class="cert-title">Market Research Internship</h3>
+            <p class="cert-org">Credential.net</p>
+          </div>
+          <span class="cert-link">🔗 View</span>
+        </div>
+      </a>
+  
+      <!-- Certificate 2 -->
+      <a href="https://www.credly.com/badges/XXXX" target="_blank" style="text-decoration: none;">
+        <div class="cert-card">
+          <div>
+            <h3 class="cert-title">Microsoft Azure Data Fundamentals (DP-900)</h3>
+            <p class="cert-org">Microsoft / Credly</p>
+          </div>
+          <span class="cert-link">🔗 View</span>
+        </div>
+      </a>
+  
+      <!-- Certificate 3 -->
+      <a href="https://coursera.org/verify/XXXX" target="_blank" style="text-decoration: none;">
+        <div class="cert-card">
+          <div>
+            <h3 class="cert-title">Google Data Analytics Professional Certificate</h3>
+            <p class="cert-org">Coursera</p>
+          </div>
+          <span class="cert-link">🔗 View</span>
+        </div>
+      </a>
+  
+      <!-- Add more as needed -->
   
     </div>
   </section>
