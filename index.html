@@ -1,40 +1,85 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-35D09ZJ5JK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-35D09ZJ5JK');
+</script>
+  <style>
+    .fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  
+}
+
+
+  </style>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ananya Srinath Achar | Home</title>
-  <link rel="icon" type="image/png" href="cutelogo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Ananya Srinath Achar | Portfolio</title>
+  <link rel="icon" type="image/png" href="cutelogo.png"/>
+  
   <style>
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Adjust if your navbar height changes */
+}
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Outfit', sans-serif;
+      
+  font-family: 'Outfit', sans-serif;
+
+
       margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: aliceblue;
       color: #2F4156;
     }
+
     header {
+      header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background-color: rgba(0,0,0,0.3);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+header * {
+  position: relative;
+  z-index: 1;
+}
+header {
+  position: relative;
+}
+
       background-image: url('image.png');
       background-size: cover;
       background-position: center;
       text-align: center;
       padding: 3rem 1rem 2rem 1rem;
       color: white;
-      position: relative;
     }
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      height: 100%; width: 100%;
-      background-color: rgba(0,0,0,0.3);
-      backdrop-filter: blur(2px);
-      z-index: 0;
-    }
-    header * {
-      position: relative;
-      z-index: 1;
-    }
+
     header img {
       width: 220px;
       height: 220px;
@@ -44,58 +89,84 @@
       margin-bottom: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
+
+    .cta-buttons a:hover,
+nav a:hover {
+  background-color: #3B4F68;
+  transform: translateY(-2px);
+}
+
     .cta-buttons a {
-      background-color: #C3DCEB;
-      color: #2F4156;
-      padding: 0.9rem 1.6rem;
-      margin: 0.5rem;
-      text-decoration: none;
-      border-radius: 10px;
-      display: inline-block;
-      font-weight: 600;
-      font-size: 1rem;
-      outline: 2px solid #2F4156;
-      outline-offset: -6px;
-      transition: all 0.3s ease-in-out;
-    }
-    .cta-buttons a:hover {
-      background-color: #B0D1E3;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transform: translateY(-2px);
-    }
+  background-color: #2F4156;
+  color: #C3DCEB;
+  padding: 0.9rem 1.6rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  outline: 2px solid #C3DCEB;
+  outline-offset: -5px;
+}
+
+
     nav {
-      background-color: #C3DCEB;
-      text-align: center;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      background-color: #2F4156;
-      color: #C3DCEB;
-      padding: 10px 20px;
-      margin: 0 0.5rem;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      outline: 3px solid #C3DCEB;
-      outline-offset: -6px;
-      display: inline-block;
-    }
-    nav a:hover {
-      background-color: #3B4F68;
-    }
+  background-color: #C3DCEB;  /* light blue from your screenshot */
+  text-align: center;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+nav a {
+  background-color: #2F4156;        /* dark blue */
+  color: #C3DCEB;                   /* light blue text */
+  padding: 10px 20px;
+  margin: 0 0.5rem;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;                     /* remove default border */
+  outline: 3px solid #C3DCEB;       /* single light blue outline */
+  outline-offset: -6px;             /* brings it slightly inside */
+  display: inline-block;
+}
+
+
+
+
+
+
+nav a:hover {
+  background-color: #3B4F68;
+}
+
+
     section {
       max-width: 900px;
       margin: auto;
       padding: 1rem 1rem;
       margin-bottom: 20px;
     }
+
     h2 {
       color: #567C8D;
     }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
     .quote {
       font-style: italic;
       color: #2F4156;
@@ -103,6 +174,7 @@
       padding-left: 1rem;
       margin: 1rem 0;
     }
+
     .tech-stack {
       background-color: #fff;
       padding: 1rem;
@@ -110,6 +182,7 @@
       margin-top: 2rem;
       box-shadow: 1px 2px 4px 2px #C0D9E6;
     }
+
     .aspirations {
       background-color: #2F4156;
       color: #C0D9E6;
@@ -117,11 +190,12 @@
       border-radius: 10px;
       text-align: center;
       margin-top: 2rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      width: 900px !important;
+      padding: 15px;
+      margin-bottom: 25px;
       border: 1px solid #C0D9E6;
     }
+
     footer {
       text-align: center;
       background-color: #2F4156;
@@ -130,29 +204,102 @@
       margin-top: 3rem;
       box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      .cta-buttons a {
+        display: block;
+        margin: 0.5rem auto;
+      }
+
+      header {
+        padding: 2rem 1rem;
+      }
+    }
+    nav a.active {
+  color: #ffffff;
+  background-color: #567C8D;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+.cta-buttons a {
+  background-color: #C3DCEB;
+  color: #2F4156;
+  padding: 0.9rem 1.6rem; /* more padding to give space inside */
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  outline: 2px solid #2F4156;      /* dark blue border */
+  outline-offset: -6px;            /* pulls the border inside */
+}
+
+
+
+.cta-buttons a:hover {
+  background-color: #B0D1E3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+nav a.active {
+  background-color: #C0D9E6 !important;
+  color: #2F4156 !important;
+  box-shadow: 0 0 0 2px #2F4156 inset;
+}
+
+
   </style>
 </head>
+<script>
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current)) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
 <body>
   <header>
     <img src="profile.jpg" alt="Ananya Srinath Achar" />
     <h1>Ananya Srinath Achar</h1>
     <p>Data Analyst | BI Engineer | ETL & Cloud Enthusiast</p>
     <div class="cta-buttons">
-      <a href="https://drive.google.com/file/d/1XFmX0uU7Nt2lbJTnFlj8gftAkZMYtxQ6/preview" target="_blank">View Resume (PDF)</a>
+      <a href="https://drive.google.com/file/d/1XFmX0uU7Nt2lbJTnFlj8gftAkZMYtxQ6/preview" target="_blank">📄 View Resume (PDF)</a>
       <a href="https://www.linkedin.com/in/ananyaachar/" target="_blank">LinkedIn</a>
       <a href="https://github.com/ananyas1999" target="_blank">GitHub</a>
     </div>
   </header>
 
   <nav>
-    <a href="index.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="experience.html">Experience</a>
-    <a href="leadership.html">Leadership</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" style="background-color: #ffffff;border-radius: 12px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04); margin-top: 20px; border: 1px solid #C0D9E6;class=fade-in">
     <h2>About Me</h2>
     <p class="quote">"I aspire to be a data & AI leader, contributing across business lifecycles and shaping strategies that drive intelligent solutions."</p>
     <p><strong>Software Intern</strong> at Nuvento Inc, United States<br>
@@ -181,27 +328,214 @@
     </div>
   </section>
 
-  <section class="aspirations">
-    <h2>Aspirations</h2>
+  <section class="aspirations" style="background-color: #2F4156; color: #C0D9E6; padding: 2rem; border-radius: 10px; text-align: center; margin: 2rem auto; max-width: 900px; width: 90%; border: 1px solid #C0D9E6;">
+    <h2 style="margin-top: 0;">Aspirations</h2>
     <p style="font-size: 1.05rem; line-height: 1.8;">
       My goal is to make a meaningful difference in the world by using my creativity and intuition to solve real-life problems. I love exploring new ideas, connecting the dots in unexpected ways, and bringing thoughtful change wherever I can.
       <br><br>
       I truly believe that even the smallest actions can create a ripple effect — and I want to be someone who sparks those ripples, one step at a time.
     </p>
   </section>
+  
 
-  <section id="learning" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); padding: 1.5rem; margin: 2rem auto; max-width: 900px;">
-    <h2 style="color: #567C8D;">What I'm Learning Right Now</h2>
+  <section id="learning" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); padding: 1.5rem; margin: 2rem auto;">
+    <h2 style="color: #567C8D;">What I'm Learning Right Now 🚀</h2>
     <p style="font-style: italic; color: #2F4156;">"Always in learning mode — here’s what’s keeping my brain busy lately:"</p>
-    <ul style="padding-left: 1.5rem; font-size: 1.05rem; line-height: 1.6;">
+    <ul style="list-style-type: '📘 '; padding-left: 1.5rem; font-size: 1.05rem; line-height: 1.6;">
       <li><strong>Generative AI:</strong> Experimenting with prompts, use cases, and LLM-powered tools</li>
       <li><strong>Chatbot Building:</strong> Piecing together flows and integrating with real-time data</li>
-      <li><strong>New Data Engineering Tools:</strong> Exploring Airflow, Snowflake, and more</li>
+      <li><strong>New Data Engineering Tools:</strong> There’s <em>always</em> one more! Diving into Airflow, Snowflake, and whatever else shows up in my feed 😅</li>
     </ul>
+  </section>
+  
+
+  <section id="projects" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);class=fade-in">
+    <h2>Project Highlights</h2>
+  
+    <div style="flex: 1 1 100%; padding: 1rem; border: 1px solid #C0D9E6; border-radius: 12px; background-color: #FAFAFA; box-shadow: 0 1px 5px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="ocd-visual.png" alt="OCD Analysis" style="width: 120px; height: 120px; border-radius: 8px; object-fit: cover;" />
+      <div>
+        <h4>OCD Behavioral Insights (SQL + Tableau)</h4>
+        <p>Identified high-risk OCD patterns by analyzing YBOCS severity, lifestyle, and comorbidities. Highlighted "silent sufferers" and behavioral loops using advanced SQL + interactive Tableau dashboards.</p>
+        <a href="https://github.com/ananyas1999/OCD--Tableau-and-SQL" target="_blank" style="color: #2F4156; font-weight: bold; text-decoration: underline;">🔗 View on GitHub</a>
+      </div>
+    </div>
+  
+    <div style="flex: 1 1 100%; padding: 1rem; border: 1px solid #C0D9E6; border-radius: 12px; background-color: #FAFAFA; box-shadow: 0 1px 5px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      <img src="disease.png" alt="Cirrhosis Outcome Prediction" style="width: 120px; height: 120px; border-radius: 8px; object-fit: cover;" />
+      <div>
+        <h4>Cirrhosis Outcome Prediction (ML + Databricks)</h4>
+        <p>Developed and trained a multi-class classification model on 10,000 liver cirrhosis patient records to predict their outcomes, achieved a low log loss, logged the results to a Databricks server using MLflow.</p>
+        <a href="https://github.com/ananyas1999/cirrhosis_outcome_prediction" target="_blank" style="color: #2F4156; font-weight: bold; text-decoration: underline;">🔗 View on GitHub</a>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section id="experience" style="background-color: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+    <h2 style="color: #567C8D; text-align: center;">Professional Experience</h2>
+    
+    <div style="display: flex; flex-direction: column; gap: 3rem; position: relative; margin-top: 2rem;">
+  
+      <!-- Timeline Line -->
+      <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background-color: #C0D9E6; transform: translateX(-50%); z-index: 0;"></div>
+  
+      <!-- Each Card -->
+      <div style="position: relative; width: 100%; display: flex; justify-content: flex-start;">
+        <div style="background-color: #FAFAFA; border-left: 6px solid #2F4156; padding: 1rem 1.5rem; border-radius: 10px; width: 48%; box-shadow: 0 2px 6px rgba(0,0,0,0.06); z-index: 1;">
+          <h3 style="margin: 0;">Nuvento Inc</h3>
+          <p style="margin: 0.2rem 0; font-weight: bold;">Software Engineer Intern (Feb 2025 – Present)</p>
+          <p style="margin-top: 0.6rem;">Improved dashboard clarity and spotted gaps in performance across systems. Collaborated with teams to enhance data refresh speed and smooth dashboard flow.</p>
+        </div>
+      </div>
+  
+      <div style="position: relative; width: 100%; display: flex; justify-content: flex-end;">
+        <div style="background-color: #FAFAFA; border-right: 6px solid #2F4156; padding: 1rem 1.5rem; border-radius: 10px; width: 48%; box-shadow: 0 2px 6px rgba(0,0,0,0.06); z-index: 1;">
+          <h3 style="margin: 0;">Cognizant</h3>
+          <p style="margin: 0.2rem 0; font-weight: bold;">Data Analyst II (Mar 2022 – Jul 2023)</p>
+          <p style="margin-top: 0.6rem;">Built reporting flows that empowered faster, smarter decision-making. Supported cross-functional teams and mentored peers on business analytics goals.</p>
+        </div>
+      </div>
+  
+      <div style="position: relative; width: 100%; display: flex; justify-content: flex-start;">
+        <div style="background-color: #FAFAFA; border-left: 6px solid #2F4156; padding: 1rem 1.5rem; border-radius: 10px; width: 48%; box-shadow: 0 2px 6px rgba(0,0,0,0.06); z-index: 1;">
+          <h3 style="margin: 0;">Cognizant</h3>
+          <p style="margin: 0.2rem 0; font-weight: bold;">Data Analyst I (Jul 2021 – Mar 2022)</p>
+          <p style="margin-top: 0.6rem;">Replaced outdated reports with clear visuals for better decision-making. Resolved ongoing data access issues and made dashboards work faster.</p>
+        </div>
+      </div>
+  
+      <div style="position: relative; width: 100%; display: flex; justify-content: flex-end;">
+        <div style="background-color: #FAFAFA; border-right: 6px solid #2F4156; padding: 1rem 1.5rem; border-radius: 10px; width: 48%; box-shadow: 0 2px 6px rgba(0,0,0,0.06); z-index: 1;">
+          <h3 style="margin: 0;">Unique Tech Designs</h3>
+          <p style="margin: 0.2rem 0; font-weight: bold;">Data Analyst Intern (Aug 2020 – Apr 2021)</p>
+          <p style="margin-top: 0.6rem;">Shared insights on campaign performance through easy-to-read reports. Helped structure raw data that supported early internal reporting efforts.</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <section id="leadership" style="padding: 3rem 2rem; background: linear-gradient(to bottom right, #f0f7ff, #ffffff); border-radius: 12px;">
+    <h2 style="text-align: center; font-size: 2.2rem; background: linear-gradient(to right, #2F4156, #567C8D); -webkit-background-clip: text; color: transparent; font-weight: 700;">Leadership, Creative & Recognition Highlights</h2>
+  
+    <!-- CREATIVE WORK -->
+    <div style="margin-top: 3rem;">
+      <span style="font-weight: 600; font-size: 1.1rem; color: #567C8D;">Creative Work</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1.2rem;">
+        <div style="flex: 1 1 300px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.08); transition: 0.3s ease-in-out;">
+          <h3 style="margin: 0 0 0.6rem; font-size: 1.2rem;">Author — The Teacher’s Daughter</h3>
+          <p style="color: #2F4156;">Published a poetry and prose collection exploring identity and memory through storytelling.</p>
+          <a href="https://www.amazon.in/Teachers-Daughter-Ananya-Achar/dp/B0BG1ZYC4R" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: #2F4156; font-weight: bold; text-decoration: underline;">View on Amazon</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- LEADERSHIP -->
+    <div style="margin-top: 3rem;">
+      <span style="font-weight: 600; font-size: 1.1rem; color: #567C8D;">Leadership & Campus Involvement</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1.2rem;">
+        <div style="flex: 1 1 300px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+          <h3 style="margin: 0;">UT Dallas Student Union</h3>
+          <p style="color: #2F4156;">Held 3 roles for over a year: Student Manager, Assistant, and Leadership Council Officer. Supported events and student success programs.</p>
+        </div>
+        <div style="flex: 1 1 300px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+          <h3 style="margin: 0;">Chartwells Officer</h3>
+          <p style="color: #2F4156;">Worked with campus dining to drive service improvements and voice student feedback into tangible initiatives.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- COMMUNITY & ADVOCACY -->
+    <div style="margin-top: 3rem;">
+      <span style="font-weight: 600; font-size: 1.1rem; color: #567C8D;">Community & Advocacy</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1.2rem;">
+        <div style="flex: 1 1 300px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+          <h3 style="margin: 0;">Women Techmakers Ambassador</h3>
+          <p style="color: #2F4156;">Led community efforts and mentorship in Google’s global tech equity program. Hosted events and supported women in tech spaces.</p>
+        </div>
+        <div style="flex: 1 1 300px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+          <h3 style="margin: 0;">Circle Leader — U&I Trust</h3>
+          <p style="color: #2F4156;">Led student learning for underserved communities for 1.5 years, supporting academics, life skills, and emotional support.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- RESEARCH & INDUSTRY -->
+    <div style="margin-top: 3rem;">
+      <span style="font-weight: 600; font-size: 1.1rem; color: #567C8D;">Research & Industry Experience</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1.2rem;">
+        <div style="flex: 1 1 300px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+          <h3 style="margin: 0;">Research Paper – ICICS Conference</h3>
+          <p style="color: #2F4156;">Presented original research at the ICICS Conference and published in Springer’s Lecture Notes series.</p>
+          <a href="https://link.springer.com/chapter/10.1007/978-981-16-7330-6_23" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: #2F4156; font-weight: bold; text-decoration: underline;">Read Publication</a>
+        </div>
+        <div style="flex: 1 1 300px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+          <h3 style="margin: 0;">Market Research Intern</h3>
+          <p style="color: #2F4156;">Completed a certified internship focused on competitive analysis and market trend reporting.</p>
+          <a href="https://www.credential.net/3d067df9-cc76-4cad-ba28-7f7f20f34f17#acc.LNYFoCZf" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: #2F4156; font-weight: bold; text-decoration: underline;">View Credential</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+
+  <section id="contact" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04)class=fade-in;">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ananya.achar82@gmail.com">ananya.achar82@gmail.com</a></p>
+    <p>Phone: (945) 527-4967</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Ananya Srinath Achar. All rights reserved.</p>
   </footer>
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+<a href="#top" id="backToTop" style="display:none;position:fixed;bottom:30px;right:20px;background-color:#567C8D;color:white;padding:10px 15px;border-radius:50%;text-decoration:none;font-weight:bold;font-size:18px;">↑</a>
+
+<script>
+  const backToTop = document.getElementById('backToTop');
+  window.onscroll = () => {
+    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+  };
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+
+    let currentSection = '';
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (scrollY >= sectionTop) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(currentSection)) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+  
 </body>
 </html>
