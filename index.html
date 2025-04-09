@@ -266,6 +266,98 @@ nav a.active {
   color: #2F4156 !important;
   box-shadow: 0 0 0 2px #2F4156 inset;
 }
+.rec-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.rec-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.rec-card {
+  min-width: 100%;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  text-align: center;
+  position: relative;
+}
+
+.rec-dp {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.rec-card blockquote {
+  font-style: italic;
+  color: #2F4156;
+  margin: 0.8rem auto;
+  font-size: 1.05rem;
+  max-width: 90%;
+}
+
+.rec-card h4 {
+  margin-top: 1.2rem;
+  color: #2F4156;
+}
+
+.rec-title {
+  color: #567C8D;
+  font-size: 0.95rem;
+}
+
+.rec-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: #2F4156;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.rec-btn.prev {
+  left: 10px;
+}
+
+.rec-btn.next {
+  right: 10px;
+}
+
+.rec-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.rec-dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #C0D9E6;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.rec-dots .active {
+  background: #2F4156;
+}
+
 .carousel {
   position: relative;
   overflow: hidden;
@@ -585,58 +677,35 @@ nav a.active {
   <section id="recommendations" class="standard-section" style="text-align: center;">
     <h2 style="color: #567C8D; margin-bottom: 2rem;">🌟 Recommendations</h2>
   
-    <div class="carousel">
-      <div class="carousel-track">
-        <!-- Each recommendation card -->
-        <div class="card">
-          <p class="quote">“Ananya takes an active interest in learning and gaining knowledge in American Business Practices.”</p>
-          <p class="quote">“Her experience with Python, Microsoft Power BI, C++, My SQL, C, HTML, CSS, JavaScript, and Informatica would make her an asset to any organization.”</p>
+    <div class="rec-carousel">
+      <div class="rec-track">
+        <!-- Card 1 -->
+        <div class="rec-card">
+          <img src="dp-brenda.jpg" alt="Brenda Siri" class="rec-dp">
+          <blockquote>“Ananya takes an active interest in learning and gaining knowledge in American Business Practices.”</blockquote>
+          <blockquote>“Her experience with Python, Microsoft Power BI, C++, My SQL, C, HTML, CSS, JavaScript, and Informatica would make her an asset to any organization.”</blockquote>
           <h4>Brenda Siri</h4>
-          <p class="title">President & CEO, Corporate Connections</p>
+          <p class="rec-title">President & CEO, Corporate Connections</p>
         </div>
   
-        <div class="card">
-          <p class="quote">“I was particularly impressed with her communication skills and ability to deal with challenging situations.”</p>
-          <p class="quote">“She will be an excellent asset to the team.”</p>
+        <!-- Card 2 -->
+        <div class="rec-card">
+          <img src="dp-partha.jpg" alt="Parthasaradhi Naidu" class="rec-dp">
+          <blockquote>“I was particularly impressed with her communication skills and ability to deal with challenging situations.”</blockquote>
+          <blockquote>“She will be an excellent asset to the team.”</blockquote>
           <h4>Parthasaradhi Naidu</h4>
-          <p class="title">Sr. Associate, Cognizant</p>
+          <p class="rec-title">Sr. Associate, Cognizant</p>
         </div>
   
-        <div class="card">
-          <p class="quote">“Her clear vision and strategic thinking have been an asset to all the projects she has been a part of.”</p>
-          <p class="quote">“I highly recommend Ananya as a leader and believe her contributions would be invaluable to any organization.”</p>
-          <h4>Shreya Srinivas</h4>
-          <p class="title">Senior Analyst, Capgemini</p>
-        </div>
-  
-        <div class="card">
-          <p class="quote">“Full of ideas and her clarity towards problem solving is exemplary.”</p>
-          <p class="quote">“One won't find many like Ananya out there.”</p>
-          <h4>Mukul Muralikrishna</h4>
-          <p class="title">Incoming Intern, Amazon</p>
-        </div>
-  
-        <div class="card">
-          <p class="quote">“She is highly adaptable, supportive and encouraging and would be a great asset to any team.”</p>
-          <p class="quote">“It was really great to be working under her leadership.”</p>
-          <h4>Venkat Nikhil Mangipudi</h4>
-          <p class="title">Software Engineer</p>
-        </div>
-  
-        <div class="card">
-          <p class="quote">“She set up sync up calls and gathered status for all the pending tasks from fellow teammates.”</p>
-          <p class="quote">“She will become a good team lead and trainer for her fellow trainees.”</p>
-          <h4>Prabhu Sundararaj</h4>
-          <p class="title">Azure Data Engineer</p>
-        </div>
-  
-        <div class="card">
-          <p class="quote">“She has shared tons of quality info that a life coach would generally have.”</p>
-          <p class="quote">“The way she is handling the project is comparable to experts.”</p>
-          <h4>Ambreesh Naidu</h4>
-          <p class="title">Power BI Developer</p>
-        </div>
+        <!-- Add other cards similarly (use dp-shreya.jpg, dp-mukul.jpg etc) -->
       </div>
+  
+      <button class="rec-btn prev">&#10094;</button>
+      <button class="rec-btn next">&#10095;</button>
+      <div class="rec-dots"></div>
+    </div>
+  </section>
+  
   
       <!-- Arrows -->
       <button class="carousel-btn prev">&#10094;</button>
@@ -708,53 +777,53 @@ nav a.active {
   });
 </script>
 <script>
-  const track = document.querySelector('.carousel-track');
-  const cards = Array.from(track.children);
-  const nextBtn = document.querySelector('.carousel-btn.next');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const dotsNav = document.querySelector('.carousel-dots');
-  const cardCount = cards.length;
-  let currentIndex = 0;
+  const recTrack = document.querySelector('.rec-track');
+  const recCards = Array.from(recTrack.children);
+  const nextRec = document.querySelector('.rec-btn.next');
+  const prevRec = document.querySelector('.rec-btn.prev');
+  const recDotsNav = document.querySelector('.rec-dots');
+  const recCount = recCards.length;
+  let recIndex = 0;
 
-  // Create dots
-  for (let i = 0; i < cardCount; i++) {
+  for (let i = 0; i < recCount; i++) {
     const dot = document.createElement('span');
     if (i === 0) dot.classList.add('active');
-    dotsNav.appendChild(dot);
-  }
-  const dots = Array.from(dotsNav.children);
-
-  function updateCarousel(index) {
-    const width = cards[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${width * index}px)`;
-
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
+    recDotsNav.appendChild(dot);
   }
 
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % cardCount;
-    updateCarousel(currentIndex);
+  const recDots = Array.from(recDotsNav.children);
+
+  function updateRecCarousel(i) {
+    const width = recCards[0].getBoundingClientRect().width;
+    recTrack.style.transform = `translateX(-${width * i}px)`;
+    recDots.forEach(dot => dot.classList.remove('active'));
+    recDots[i].classList.add('active');
+  }
+
+  nextRec.addEventListener('click', () => {
+    recIndex = (recIndex + 1) % recCount;
+    updateRecCarousel(recIndex);
   });
 
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + cardCount) % cardCount;
-    updateCarousel(currentIndex);
+  prevRec.addEventListener('click', () => {
+    recIndex = (recIndex - 1 + recCount) % recCount;
+    updateRecCarousel(recIndex);
   });
 
-  dots.forEach((dot, i) => {
+  recDots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
-      currentIndex = i;
-      updateCarousel(currentIndex);
+      recIndex = i;
+      updateRecCarousel(recIndex);
     });
   });
 
-  // Auto-scroll
+  // Auto-slide every 7s
   setInterval(() => {
-    currentIndex = (currentIndex + 1) % cardCount;
-    updateCarousel(currentIndex);
-  }, 8000); // every 8 seconds
+    recIndex = (recIndex + 1) % recCount;
+    updateRecCarousel(recIndex);
+  }, 7000);
 </script>
+
 
   
 </body>
