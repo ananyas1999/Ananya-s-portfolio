@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-35D09ZJ5JK"></script>
@@ -170,6 +173,9 @@ nav a:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  <button onclick="toggleTheme()" style="float:right; margin-right: 20px; padding: 6px 10px; border-radius: 8px;">🌓</button>
+
 }
 
 
@@ -251,6 +257,15 @@ section {
   margin-bottom: 25px;
   border: 1px solid #C0D9E6;
 }
+.badge {
+  background-color: #EAF2F8;
+  color: #2F4156;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  border-radius: 50px;
+  margin-right: 6px;
+  display: inline-block;
+}
 
 
     footer {
@@ -311,6 +326,75 @@ nav a.active {
   color: #2F4156 !important;
   box-shadow: 0 0 0 2px #2F4156 inset;
 }
+
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cert-booklet {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  width: 100%;
+  max-width: 500px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 6px solid #2F4156;
+}
+
+.cert-booklet:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.cert-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f8f8f8;
+  padding: 0.4rem;
+}
+
+.cert-booklet h3 {
+  margin: 0;
+  color: #2F4156;
+  font-size: 1.1rem;
+}
+
+.cert-org {
+  margin: 0.4rem 0 0.2rem;
+  color: #567C8D;
+  font-size: 0.9rem;
+}
+
+.cert-validity {
+  font-size: 0.85rem;
+  color: #7B9CAF;
+}
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode nav {
+  background: rgba(30, 30, 30, 0.8);
+}
+
+body.dark-mode .standard-section {
+  background: #2b2b2b;
+  color: #fff;
+}
+
 .rec-carousel {
   position: relative;
   max-width: 900px;
@@ -513,6 +597,10 @@ nav a.active {
       }
     });
   });
+  function toggleTheme() {
+  document.body.classList.toggle('dark-mode');
+}
+
 </script>
 
 <body>
@@ -538,13 +626,14 @@ nav a.active {
   </nav>
   
 
-  <section id="about" class="fade-in" style="
+  <section id="about" class="fade-in" data-aos="fade-up" style="
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
   margin-top: 20px;
   border: 1px solid #C0D9E6;
 ">
+
 
     <h2>About Me</h2>
     <p class="quote">"I aspire to be a data & AI leader, contributing across business lifecycles and shaping strategies that drive intelligent solutions."</p>
@@ -556,7 +645,10 @@ nav a.active {
     <div class="tech-stack">
       <h3>Data Analysis Toolkit</h3>
       <ul>
-        <li>Python (Pandas, NumPy, Matplotlib, Seaborn), R, SQL</li>
+        <div class="badge">Python</div>
+<div class="badge">R</div>
+<div class="badge">SQL</div>
+
         <li>Power BI, Tableau, Alteryx, Excel</li>
         <li>A/B Testing, Advanced Statistics, Data Cleaning</li>
         <li>Data Visualization & Insight Storytelling</li>
@@ -574,6 +666,13 @@ nav a.active {
     </div>
   </section>
 
+  <div style="width:100%; overflow:hidden; line-height:0; margin-top: -20px;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 70px; width: 100%;">
+      <path d="M0.00,49.98 C150.00,150.00 349.32,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+            style="stroke: none; fill: #C3DCEB;"></path>
+    </svg>
+  </div>
+  
   <section class="aspirations standard-section" style="background-color: #2F4156; color: #C0D9E6; text-align: center;">
 
     <h2 style="margin-top: 0;">Aspirations</h2>
@@ -584,8 +683,15 @@ nav a.active {
     </p>
   </section>
   
+  <div style="width:100%; overflow:hidden; line-height:0; margin-top: -20px;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 70px; width: 100%;">
+      <path d="M0.00,49.98 C150.00,150.00 349.32,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+            style="stroke: none; fill: #C3DCEB;"></path>
+    </svg>
+  </div>
+  
 
-  <section id="learning" class="standard-section">
+  <section id="learning" class="standard-section" data-aos="fade-up">
 
     <h2 style="color: #567C8D;">What I'm Learning Right Now 🚀</h2>
     <p style="font-style: italic; color: #2F4156;">"Always in learning mode — here’s what’s keeping my brain busy lately:"</p>
@@ -596,17 +702,30 @@ nav a.active {
     </ul>
   </section>
   
+  <div style="width:100%; overflow:hidden; line-height:0; margin-top: -20px;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 70px; width: 100%;">
+      <path d="M0.00,49.98 C150.00,150.00 349.32,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+            style="stroke: none; fill: #C3DCEB;"></path>
+    </svg>
+  </div>
+  
 
-  <section id="projects" class="fade-in" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+  <section id="projects" class="fade-in" data-aos="fade-up" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
     <h2>Project Highlights</h2>
   
     <div style="flex: 1 1 100%; padding: 1rem; border: 1px solid #C0D9E6; border-radius: 12px; background-color: #FAFAFA; box-shadow: 0 1px 5px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+      
       <img src="ocd-visual.png" alt="OCD Analysis" style="width: 120px; height: 120px; border-radius: 8px; object-fit: cover;" />
       <div>
         <h4>OCD Behavioral Insights (SQL + Tableau)</h4>
         <p>Identified high-risk OCD patterns by analyzing YBOCS severity, lifestyle, and comorbidities. Highlighted "silent sufferers" and behavioral loops using advanced SQL + interactive Tableau dashboards.</p>
         <a href="https://github.com/ananyas1999/OCD--Tableau-and-SQL" target="_blank" style="color: #2F4156; font-weight: bold; text-decoration: underline;">🔗 View on GitHub</a>
       </div>
+      <div style="margin-top: 10px;">
+        <span class="badge">SQL</span>
+        <span class="badge">Tableau</span>
+      </div>
+      
     </div>
   
     <div style="flex: 1 1 100%; padding: 1rem; border: 1px solid #C0D9E6; border-radius: 12px; background-color: #FAFAFA; box-shadow: 0 1px 5px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
@@ -616,6 +735,11 @@ nav a.active {
         <p>Developed and trained a multi-class classification model on 10,000 liver cirrhosis patient records to predict their outcomes, achieved a low log loss, logged the results to a Databricks server using MLflow.</p>
         <a href="https://github.com/ananyas1999/cirrhosis_outcome_prediction" target="_blank" style="color: #2F4156; font-weight: bold; text-decoration: underline;">🔗 View on GitHub</a>
       </div>
+      <div style="margin-top: 10px;">
+        <span class="badge">SQL</span>
+        <span class="badge">Tableau</span>
+      </div>
+      
     </div>
   
   <div style="flex: 1 1 100%; padding: 1rem; border: 1px solid #C0D9E6; border-radius: 12px; background-color: #FAFAFA; box-shadow: 0 1px 5px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
@@ -625,11 +749,23 @@ nav a.active {
       <p>Built a conversational AI module to simulate intelligence evolution stages, using NLP techniques and topic-based logic flows. Focused on human-AI storytelling interaction.</p>
       <a href="https://github.com/ananyas1999/Age-of-Artificial-Intelligence-" target="_blank" style="color: #2F4156; font-weight: bold; text-decoration: underline;">🔗 View on GitHub</a>
     </div>
+    <div style="margin-top: 10px;">
+      <span class="badge">SQL</span>
+      <span class="badge">Tableau</span>
+    </div>
+    
   </div>
   
 </section>
 
-  <section id="experience" style="background-color: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+<div style="width:100%; overflow:hidden; line-height:0; margin-top: -20px;">
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 70px; width: 100%;">
+    <path d="M0.00,49.98 C150.00,150.00 349.32,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+          style="stroke: none; fill: #C3DCEB;"></path>
+  </svg>
+</div>
+
+  <section id="experience" data-aos="fade-up" style="background-color: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
     <h2 style="color: #567C8D; text-align: center;">Professional Experience</h2>
     
     <div style="display: flex; flex-direction: column; gap: 3rem; position: relative; margin-top: 2rem;">
@@ -675,51 +811,46 @@ nav a.active {
     </div>
   </section>
   
-  <section id="certifications" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); padding: 2rem; max-width: 900px; margin: 2rem auto;">
+  <div style="width:100%; overflow:hidden; line-height:0; margin-top: -20px;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 70px; width: 100%;">
+      <path d="M0.00,49.98 C150.00,150.00 349.32,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+            style="stroke: none; fill: #C3DCEB;"></path>
+    </svg>
+  </div>
+  
+  <section id="certifications" data-aos="fade-up" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); padding: 2rem; max-width: 900px; margin: 2rem auto;">
     <h2 style="color: #567C8D; text-align: center;">📜 Certifications</h2>
   
-    <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem;">
-      
-      <!-- Certificate 1 -->
-      <a href="https://www.credential.net/3d067df9-cc76-4cad-ba28-7f7f20f34f17" target="_blank" style="text-decoration: none;">
-        <div class="cert-card">
-          <div>
-            <h3 class="cert-title">Market Research Internship</h3>
-            <p class="cert-org">Credential.net</p>
-          </div>
-          <span class="cert-link">🔗 View</span>
+    <div class="cert-grid">
+      <a href="https://www.credly.com/badges/XXXX" class="cert-booklet" target="_blank">
+        <img src="aws-logo.png" alt="AWS Certified Cloud Practitioner" class="cert-logo" />
+        <div>
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <p class="cert-org">Issued by Amazon Web Services</p>
+          <p class="cert-validity">Valid: Feb 2024 – Feb 2027</p>
         </div>
       </a>
-  
-      <!-- Certificate 2 -->
-      <a href="https://www.credly.com/badges/XXXX" target="_blank" style="text-decoration: none;">
-        <div class="cert-card">
-          <div>
-            <h3 class="cert-title">Microsoft Azure Data Fundamentals (DP-900)</h3>
-            <p class="cert-org">Microsoft / Credly</p>
-          </div>
-          <span class="cert-link">🔗 View</span>
+    
+      <a href="https://www.credly.com/badges/XXXX" class="cert-booklet" target="_blank">
+        <img src="alteryx-logo.png" alt="Alteryx Designer Core" class="cert-logo" />
+        <div>
+          <h3>Alteryx Designer Core Certification</h3>
+          <p class="cert-org">Issued by Alteryx</p>
+          <p class="cert-validity">Valid: Jan 2023 – Jan 2025</p>
         </div>
       </a>
-  
-      <!-- Certificate 3 -->
-      <a href="https://coursera.org/verify/XXXX" target="_blank" style="text-decoration: none;">
-        <div class="cert-card">
-          <div>
-            <h3 class="cert-title">Google Data Analytics Professional Certificate</h3>
-            <p class="cert-org">Coursera</p>
-          </div>
-          <span class="cert-link">🔗 View</span>
-        </div>
-      </a>
-  
-      <!-- Add more as needed -->
-  
     </div>
+    
   </section>
+  <div style="width:100%; overflow:hidden; line-height:0; margin-top: -20px;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 70px; width: 100%;">
+      <path d="M0.00,49.98 C150.00,150.00 349.32,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+            style="stroke: none; fill: #C3DCEB;"></path>
+    </svg>
+  </div>
   
 
-  <section id="leadership" style="padding: 3rem 2rem; background: linear-gradient(to bottom right, #f0f7ff, #ffffff); border-radius: 12px;">
+  <section id="leadership" data-aos="fade-up" style="padding: 3rem 2rem; background: linear-gradient(to bottom right, #f0f7ff, #ffffff); border-radius: 12px;">
     <h2 style="text-align: center; font-size: 2.2rem; background: linear-gradient(to right, #2F4156, #567C8D); -webkit-background-clip: text; color: transparent; font-weight: 700;">Leadership, Creative & Recognition Highlights</h2>
   
     <!-- CREATIVE WORK -->
@@ -782,7 +913,15 @@ nav a.active {
     </div>
   </section>
   
-  <section id="recommendations" class="standard-section" style="text-align: center;">
+  <div style="width:100%; overflow:hidden; line-height:0; margin-top: -20px;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 70px; width: 100%;">
+      <path d="M0.00,49.98 C150.00,150.00 349.32,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+            style="stroke: none; fill: #C3DCEB;"></path>
+    </svg>
+  </div>
+  
+
+  <section id="recommendations" data-aos="fade-up" class="standard-section" style="text-align: center;">
     <h2 style="color: #567C8D; margin-bottom: 2rem;">🌟 Recommendations</h2>
   
     <div class="rec-carousel">
@@ -883,10 +1022,16 @@ nav a.active {
   </section>
   
   
+  <div style="width:100%; overflow:hidden; line-height:0; margin-top: -20px;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 70px; width: 100%;">
+      <path d="M0.00,49.98 C150.00,150.00 349.32,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+            style="stroke: none; fill: #C3DCEB;"></path>
+    </svg>
+  </div>
+  
 
 
-
-  <section id="contact" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); padding: 2rem; max-width: 900px; margin: 2rem auto;">
+  <section id="contact" data-aos="fade-up" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); padding: 2rem; max-width: 900px; margin: 2rem auto;">
     <h2 style="color: #567C8D;">📬 Contact Me</h2>
     <p style="font-size: 1.1rem; margin-bottom: 1rem;">
       I'm always happy to connect! Feel free to reach out via email or phone.
@@ -991,6 +1136,8 @@ nav a.active {
   }, 7000);
 </script>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true });</script>
 
   
 </body>
