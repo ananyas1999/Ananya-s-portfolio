@@ -503,88 +503,96 @@ body.dark-mode .standard-section {
   background: #2F4156;
 }
 
-.carousel {
-  position: relative;
-  overflow: hidden;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.carousel-track {
+.spotify-scroll-carousel {
   display: flex;
-  transition: transform 0.6s ease-in-out;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
 }
 
-.card {
-  min-width: 100%;
-  background: #ffffff;
-  border: 1px solid #C0D9E6;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  text-align: left;
+.spotify-nowplaying-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 240px;
+  background: #121212;
+  border-radius: 18px;
+  padding: 16px;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-.card .quote {
-  font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #2F4156;
+.album-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #1e1e1e;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-.card h4 {
-  margin-top: 1rem;
-  margin-bottom: 0.2rem;
-  color: #2F4156;
+.album-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.card .title {
-  font-size: 0.9rem;
-  color: #567C8D;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 45%;
-  transform: translateY(-50%);
-  background: #2F4156;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 2;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
-.carousel-dots {
+.track-info {
   text-align: center;
-  margin-top: 1rem;
 }
 
-.carousel-dots span {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #C0D9E6;
-  border-radius: 50%;
-  margin: 0 6px;
-  cursor: pointer;
-  transition: 0.3s;
+.track-title {
+  font-weight: 600;
+  font-size: 1rem;
 }
 
-.carousel-dots .active {
-  background: #2F4156;
+.track-artist {
+  font-size: 0.75rem;
+  color: #b3b3b3;
 }
+
+.progress-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: #b3b3b3;
+}
+
+.bar {
+  flex-grow: 1;
+  height: 4px;
+  background-color: #404040;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.bar .fill {
+  width: 30%;
+  height: 100%;
+  background-color: #1db954;
+}
+
+.player-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.1rem;
+  color: #b3b3b3;
+  margin-top: 10px;
+}
+
+.icon.play {
+  font-size: 1.4rem;
+  color: white;
+}
+
 
 
   </style>
@@ -931,74 +939,150 @@ body.dark-mode .standard-section {
   <div style="height: 2px; width: 80%; margin: 3rem auto; background: linear-gradient(to right, #C0D9E6, #ffffff, #C0D9E6);"></div>
   
 
-  <section id="leadership" class="standard-section" style="text-align: center;">
-    <h2 style="font-size: 2rem; color: #2F4156; margin-bottom: 2rem;">✨ Leadership, Creativity & Recognition</h2>
-  
-    <div class="carousel" id="leadership-carousel" style="position: relative; overflow: hidden; max-width: 960px; margin: auto;">
-      <div class="carousel-track" style="display: flex; transition: transform 0.6s ease-in-out; gap: 20px; padding: 10px;">
-  
-        <!-- Card Template -->
-        <div class="card" style="flex: 0 0 45%; max-width: 45%; background: #ffffff; border: 1px solid #C0D9E6; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden; text-align: left;">
-          <img src="author.jpg" alt="Author" style="width: 100%; height: 380px; object-fit: cover;">
-          <div style="padding: 1rem;">
-            <h4 style="margin: 0; color: #2F4156;">The Teacher’s Daughter — Published Author</h4>
-            <p class="quote" style="font-style: italic;">Wrote and published a personal narrative, selling 70+ copies. Storytelling rooted in heart and life lessons.</p>
-            <p class="rec-title" style="color: #567C8D;">Creative Work | Amazon</p>
-          </div>
-        </div>
-  
-        <div class="card" style="flex: 0 0 45%; max-width: 45%; background: #ffffff; border: 1px solid #C0D9E6; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden; text-align: left;">
-          <img src="utd-leadership.jpg" alt="UTD Leader" style="width: 100%; height: 380px; object-fit: cover;">
-          <div style="padding: 1rem;">
-            <h4 style="margin: 0; color: #2F4156;">UTD Student Union Leader</h4>
-            <p class="quote" style="font-style: italic;">From Student Assistant to Manager in 1 year. Led 10+ events, coordinated teams, and drove student engagement.</p>
-            <p class="rec-title" style="color: #567C8D;">Leadership | University of Texas at Dallas</p>
-          </div>
-        </div>
-  
-        <div class="card" style="flex: 0 0 45%; max-width: 45%; background: #ffffff; border: 1px solid #C0D9E6; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden; text-align: left;">
-          <img src="wtm.jpg" alt="WTM" style="width: 100%; height: 380px; object-fit: cover;">
-          <div style="padding: 1rem;">
-            <h4 style="margin: 0; color: #2F4156;">Women Techmakers Ambassador</h4>
-            <p class="quote" style="font-style: italic;">Organized meetups, promoted women in STEM, and mentored peers in tech as part of Google's WTM program.</p>
-            <p class="rec-title" style="color: #567C8D;">Advocacy | Google WTM</p>
-          </div>
-        </div>
-  
-        <div class="card" style="flex: 0 0 45%; max-width: 45%; background: #ffffff; border: 1px solid #C0D9E6; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden; text-align: left;">
-          <img src="uandi.jpg" alt="U&I" style="width: 100%; height: 380px; object-fit: cover;">
-          <div style="padding: 1rem;">
-            <h4 style="margin: 0; color: #2F4156;">Circle Leader – U&I Trust</h4>
-            <p class="quote" style="font-style: italic;">Led a learning center for underserved students. Delivered lessons in academics and emotional intelligence.</p>
-            <p class="rec-title" style="color: #567C8D;">Community | U&I NGO</p>
-          </div>
-        </div>
-  
-        <div class="card" style="flex: 0 0 45%; max-width: 45%; background: #ffffff; border: 1px solid #C0D9E6; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden; text-align: left;">
-          <img src="springer.jpg" alt="Springer" style="width: 100%; height: 380px; object-fit: cover;">
-          <div style="padding: 1rem;">
-            <h4 style="margin: 0; color: #2F4156;">Researcher – ICICS + Springer</h4>
-            <p class="quote" style="font-style: italic;">Presented a paper on smart embedded systems, published in Springer Lecture Notes in Computer Science.</p>
-            <p class="rec-title" style="color: #567C8D;">Research | ICICS Conference</p>
-          </div>
-        </div>
-  
-        <div class="card" style="flex: 0 0 45%; max-width: 45%; background: #ffffff; border: 1px solid #C0D9E6; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden; text-align: left;">
-          <img src="research-intern.jpg" alt="Internship" style="width: 100%; height: 380px; object-fit: cover;">
-          <div style="padding: 1rem;">
-            <h4 style="margin: 0; color: #2F4156;">Market Research Intern</h4>
-            <p class="quote" style="font-style: italic;">Conducted industry analysis and built dashboards for trends and competitor insights using market data.</p>
-            <p class="rec-title" style="color: #567C8D;">Internship | Strategy & Business</p>
-          </div>
-        </div>
-  
+  <!-- Spotify-Style Leadership Carousel Section -->
+<section id="leadership" class="standard-section" style="text-align: center;">
+  <h2 style="font-size: 2rem; color: #2F4156; margin-bottom: 2rem;">✨ Leadership, Creativity & Recognition</h2>
+
+  <div class="spotify-scroll-carousel">
+
+    <!-- Card 1 -->
+    <div class="spotify-nowplaying-card">
+      <div class="album-frame">
+        <img src="wtm.jpg" alt="WTM Ambassador">
       </div>
-  
-      <button class="carousel-btn prev" onclick="changeLeadershipSlide(-1)">&#10094;</button>
-      <button class="carousel-btn next" onclick="changeLeadershipSlide(1)">&#10095;</button>
-      <div class="carousel-dots" id="leadership-dots"></div>
+      <div class="controls">
+        <div class="track-info">
+          <div class="track-title">WTM Ambassador</div>
+          <div class="track-artist">Google | Advocacy</div>
+        </div>
+        <div class="progress-bar">
+          <span>0:00</span>
+          <div class="bar">
+            <div class="fill"></div>
+          </div>
+          <span>3:14</span>
+        </div>
+        <div class="player-buttons">
+          <i class="icon">🔀</i>
+          <i class="icon">⏮️</i>
+          <i class="icon play">▶️</i>
+          <i class="icon">⏭️</i>
+          <i class="icon">🔁</i>
+        </div>
+      </div>
     </div>
-  </section>   
+
+    <!-- Card 2 -->
+    <div class="spotify-nowplaying-card">
+      <div class="album-frame">
+        <img src="author.jpg" alt="Published Author">
+      </div>
+      <div class="controls">
+        <div class="track-info">
+          <div class="track-title">Published Author</div>
+          <div class="track-artist">Amazon | Storytelling</div>
+        </div>
+        <div class="progress-bar">
+          <span>0:00</span>
+          <div class="bar">
+            <div class="fill"></div>
+          </div>
+          <span>2:45</span>
+        </div>
+        <div class="player-buttons">
+          <i class="icon">🔀</i>
+          <i class="icon">⏮️</i>
+          <i class="icon play">▶️</i>
+          <i class="icon">⏭️</i>
+          <i class="icon">🔁</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="spotify-nowplaying-card">
+      <div class="album-frame">
+        <img src="utd-leadership.jpg" alt="UTD Leader">
+      </div>
+      <div class="controls">
+        <div class="track-info">
+          <div class="track-title">UTD Student Leader</div>
+          <div class="track-artist">UT Dallas | Leadership</div>
+        </div>
+        <div class="progress-bar">
+          <span>0:00</span>
+          <div class="bar">
+            <div class="fill"></div>
+          </div>
+          <span>3:05</span>
+        </div>
+        <div class="player-buttons">
+          <i class="icon">🔀</i>
+          <i class="icon">⏮️</i>
+          <i class="icon play">▶️</i>
+          <i class="icon">⏭️</i>
+          <i class="icon">🔁</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="spotify-nowplaying-card">
+      <div class="album-frame">
+        <img src="springer.jpg" alt="Researcher">
+      </div>
+      <div class="controls">
+        <div class="track-info">
+          <div class="track-title">Springer Researcher</div>
+          <div class="track-artist">Smart Systems | ICICS</div>
+        </div>
+        <div class="progress-bar">
+          <span>0:00</span>
+          <div class="bar">
+            <div class="fill"></div>
+          </div>
+          <span>2:59</span>
+        </div>
+        <div class="player-buttons">
+          <i class="icon">🔀</i>
+          <i class="icon">⏮️</i>
+          <i class="icon play">▶️</i>
+          <i class="icon">⏭️</i>
+          <i class="icon">🔁</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="spotify-nowplaying-card">
+      <div class="album-frame">
+        <img src="uandi.jpg" alt="U&I Leader">
+      </div>
+      <div class="controls">
+        <div class="track-info">
+          <div class="track-title">Circle Leader – U&I</div>
+          <div class="track-artist">NGO | Education</div>
+        </div>
+        <div class="progress-bar">
+          <span>0:00</span>
+          <div class="bar">
+            <div class="fill"></div>
+          </div>
+          <span>3:22</span>
+        </div>
+        <div class="player-buttons">
+          <i class="icon">🔀</i>
+          <i class="icon">⏮️</i>
+          <i class="icon play">▶️</i>
+          <i class="icon">⏭️</i>
+          <i class="icon">🔁</i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  
   
   <div style="height: 2px; width: 80%; margin: 3rem auto; background: linear-gradient(to right, #C0D9E6, #ffffff, #C0D9E6);"></div>
 
